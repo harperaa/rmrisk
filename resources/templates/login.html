@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>rm_risk - login</title>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="logo">[rm_risk]</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+        <form action="{{context}}/login" method="POST">
+            {% csrf-field %}
+            <label for="username">Username</label>
+            <input id="username"
+                   name="username"
+                   tabindex="1"
+                   type="text"
+                   value="{{username}}" autofocus /><br />
+            <div class="error">{{username-error}}</div>
+
+            <label for="password">Password</label>
+            <input id="password"
+                   name="password"
+                   tabindex="2"
+                   type="password"
+                   autocomplete="off" /><br />
+            <div class="error">{{error}}</div>
+            <input tabindex="3" type="submit" value="login" />
+        </form>
+    </div>
+</div>
+<!-- scripts and styles -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% style "/css/screen.css" %}
+
+<script type="text/javascript">
+        var context = "{{servlet-context}}";
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+## TODO:
+Create authenticated session with buddy
+
+
+lein new luminus rmrisk +cljs +auth +postgres
+
+## DON'T ADD MORE DEPS WITHOUT CHECKING:
+http://yogthos.net/posts/2015-02-28-Luminus-2.0.html
+
+-- DB Start
+-- sudo su -
+-- su postgres
+
+-- MAC -> psql poastgres
+
+-- CREATE USER rmrisk;
+-- ALTER USER rmrisk WITH PASSWORD 'defailt1';
+-- CREATE DATABASE rmrisk OWNER rmrisk;
+
+
+-- $ psql -U rmrisk rmrisk
+
+-- REPL
+lein repl
+
+-- getting clojurescript working
+lein cljsbuild auto
+leinring server
+
+-- login page tutorial
+https://dhruvp.github.io/2015/02/23/mailchimip-clojure/
+
+OAuth2 implementation - clojure
+
+;; reload a clojure file (use 'rmrisk.db.core :reload)
+
